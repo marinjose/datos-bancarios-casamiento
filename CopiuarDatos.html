@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Bancarios</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #bloqueDatos {
+            background-color: #C3CDBD;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        #botonCopiar {
+            background-color: #383428;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bloqueDatos">
+        <h3>Datos Bancarios</h3>
+        <p>CBU: [CBU]</p>
+        <p>Cuenta: [NÚMERO DE CUENTA]</p>
+        <p>Alias: [ALIAS]</p>
+        <button id="botonCopiar" onclick="copiarAlPortapapeles()">Copiar Datos</button>
+    </div>
+
+    <script>
+        function copiarAlPortapapeles() {
+            var datos = "CBU: [CBU]\nCuenta: [NÚMERO DE CUENTA]\nAlias: [ALIAS]";
+            navigator.clipboard.writeText(datos).then(function() {
+                alert("Datos copiados al portapapeles");
+            }).catch(function(err) {
+                console.error('Error al copiar al portapapeles', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
