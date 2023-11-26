@@ -43,17 +43,17 @@
 
     <div id="bloqueDatos">
         <h3>Datos Bancarios</h3>
-        <p>CBU: [CBU]</p>
-        <p>Cuenta: [NÚMERO DE CUENTA]</p>
-        <p>Alias: [ALIAS]</p>
+        <p>CBU: 0720769588000040229054</p>
+        <p>Cuenta: 769-402290/5</p>
+        <p>Alias: Jose.y.Victoria</p>
         <button id="botonCopiar" onclick="copiarAlPortapapeles()">Copiar Datos</button>
     </div>
 
     <script>
         function copiarAlPortapapeles() {
-            var datos = "CBU: [CBU]\nCuenta: [NÚMERO DE CUENTA]\nAlias: [ALIAS]";
+            var datos = "0720769588000040229054";
             navigator.clipboard.writeText(datos).then(function() {
-                alert("Datos copiados al portapapeles");
+                alert("CBU copiados al portapapeles");
             }).catch(function(err) {
                 console.error('Error al copiar al portapapeles', err);
             });
